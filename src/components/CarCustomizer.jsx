@@ -144,7 +144,28 @@ export default function CarCustomizer({ carSrc, onClose }) {
                 {parts.length > 0 ? (
                     <ul className="parts-list">
                         {parts.map((part) => (
-                            <li key={part.name}>
+                            <li key={part.name} className="w-30 h-20 bg-gray-200 flex flex-col items-center justify-center rounded-lg p-2 m-2 shadow hover:shadow-lg transition-shadow">
+                                {part.name
+                                    .replace(/[_\.]/g, " ")
+                                    .replace(/([a-z])([A-Z])/g, "$1 $2")
+                                    .replace(/([A-Z])([A-Z][a-z])/g, "$1 $2")
+                                    .match(/[A-Za-z]+/g)
+                                    ?.filter(word => word.length > 1)
+                                    .reduce((acc, word, i) => {
+                                        if (i % 2 === 0) {
+                                            acc.push(word);
+                                        } else {
+                                            acc[acc.length - 1] += " " + word;
+                                        }
+                                        return acc;
+                                    }, [])
+                                    .map((group, index) => ( index < 1 &&
+                                        <p key={index} className="text-black text-sm font-medium text-center">
+                                            {group.toUpperCase()}
+                                        </p>
+                                    ))
+                                }
+
                                 <input
                                     type="color"
                                     value={part.color}

@@ -1,12 +1,65 @@
-# React + Vite
+# AR/VR Car Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive WebXR-based application that allows users to explore 3D car models in immersive AR environment. Built with React.js and Tailwind CSS, the project provides a responsive, modern UI while leveraging Blender-designed 3D models for realistic visualization.
 
-Currently, two official plugins are available:
+## 📌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔹 Immersive Experience: Supports AR/VR using WebXR
+🔹 Interactive UI: Component-based design with React.js
+🔹 Modern Styling: Built with Tailwind CSS for a clean and responsive layout
+🔹 3D Models: High-quality car models created and exported from Blender
+🔹 Developer Friendly: Developed using VS Code with React and JS extensions
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend: React.js
+Styling: Tailwind CSS
+Immersive Tech: WebXR (AR support)
+3D Models: Blender
+Code Editor: VS Code
+
+## 🚀 Installation & Setup
+
+Clone the repository:
+git clone https://github.com/YoginKumar21/17_ChakraView.git
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+npm run dev
+
+Build for production:
+npm run build
+
+## 📂 Project Structure
+
+17_ChakraView/
+│── public/            
+│── src/
+│   ├── components/    
+│   ├── assets/        
+│   ├── main.jsx       
+│   ├── index.css
+│   ├── App.css
+│   └── App.jsx        
+│── package.json
+│── .gitignore
+│── package-lock.json
+│── eslint.config.js
+│── tailwind.config.js
+│── vite.config.js
+└── README.md
+
+## 🎥 Demo
+
+🔗 Link to Demo Video
+
+
+## 👥 Team Members
+
+Yogin Kumar
+Samarth
+Sujan Kumar K
+Vinyas

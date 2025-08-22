@@ -73,6 +73,7 @@ function Team() {
                                 <img src={member.img} alt={member.name} />
                                 <h3>{member.name}</h3>
                                 <p>{member.role}</p>
+                                <p>SMVITM</p>
                                 <div className="info">
                                     <p>{member.description}  </p>
                                     <div className="socials">

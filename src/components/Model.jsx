@@ -5,21 +5,21 @@ import CarCustomizer from "./CarCustomizer";
 const carModels = [
   {
     id: 1,
-    name: "Ford Fiesta",
-    model: "ST-Line",
-    price: "₹8,29,990",
-    image: "/images/2009-ford-fiesta.webp",
-    titltImage: "/nobg/",
-    car: "models/car3.glb"
+    name: "Ford Mustang",
+    model: "Muscle Car",
+    price: "₹59,69,000",
+    image: "/images/1965-ford-mustang.webp",
+    titltImage: "/nobg/ford_mustang_gt_2013-wide-370x247-removebg-preview.png",
+    car: "models/car6.glb"
   },
   {
     id: 2,
-    name: "Ford Fusion",
-    model: "Titanium",
-    price: "₹7,50,000",
-    image: "/images/fordfusion.webp",
-    titltImage: "/nobg/2019-ford-fusion-energi-titanium-101-1557786021-removebg-preview.png",
-    car: "models/car2.glb"
+    name: "Ford Shelby",
+    model: "GT500",
+    price: "₹60,29,000",
+    image: "/images/2005FordShelby.webp",
+    titltImage: "/nobg/78103456-ford-mustang-shelby-gt500-4k-2-removebg-preview.png",
+    car: "models/car1.glb"
   },
   {
     id: 3,
@@ -32,21 +32,21 @@ const carModels = [
   },
   {
     id: 4,
-    name: "Ford Mustang",
-    model: "Muscle Car",
-    price: "₹59,69,000",
-    image: "/images/1965-ford-mustang.webp",
-    titltImage: "/nobg/ford_mustang_gt_2013-wide-370x247-removebg-preview.png",
-    car: "models/car6.glb"
+    name: "Ford Fiesta",
+    model: "ST-Line",
+    price: "₹8,29,990",
+    image: "/images/2009-ford-fiesta.webp",
+    titltImage: "/nobg/",
+    car: "models/car2.glb"
   },
   {
     id: 5,
-    name: "Ford Shelby",
-    model: "GT500",
-    price: "₹60,29,000",
-    image: "/images/2005FordShelby.webp",
-    titltImage: "/nobg/78103456-ford-mustang-shelby-gt500-4k-2-removebg-preview.png",
-    car: "models/car1.glb"
+    name: "Ford Fusion",
+    model: "Titanium",
+    price: "₹7,50,000",
+    image: "/images/fordfusion.webp",
+    titltImage: "/nobg/2019-ford-fusion-energi-titanium-101-1557786021-removebg-preview.png",
+    car: "models/car3.glb"
   },
   {
     id: 6,
@@ -157,10 +157,10 @@ function Model() {
                     <div
                       key={`${car.id}-${index}`}
                       className={`absolute transition-all duration-500 ease-out cursor-pointer will-change-transform ${isCenter
-                          ? "scale-100 z-30 opacity-100"
-                          : isAdjacent
-                            ? "scale-75 z-20 opacity-70 hover:scale-80"
-                            : "scale-50 z-10 opacity-40 hover:scale-55"
+                        ? "scale-100 z-30 opacity-100"
+                        : isAdjacent
+                          ? "scale-75 z-20 opacity-70 hover:scale-80"
+                          : "scale-50 z-10 opacity-40 hover:scale-55"
                         }`}
                       style={{
                         transform: `translateX(${offset * 500
@@ -222,8 +222,8 @@ function Model() {
                   key={index}
                   onClick={() => goToCar(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                      ? "bg-blue-400 w-8"
-                      : "bg-gray-600 hover:bg-gray-500 w-2"
+                    ? "bg-blue-400 w-8"
+                    : "bg-gray-600 hover:bg-gray-500 w-2"
                     }`}
                 />
               ))}
