@@ -12,26 +12,30 @@ An interactive WebXR-based application that allows users to explore 3D car model
 
 ## 🛠️ Tech Stack
 
-Frontend: React.js
-Styling: Tailwind CSS
-Immersive Tech: WebXR (AR support)
-3D Models: Blender
-Code Editor: VS Code
+* Frontend: React.js
+* Styling: Tailwind CSS
+* Immersive Tech: WebXR (AR support)
+* 3D Models: Blender
+* Code Editor: VS Code
 
 ## 🚀 Installation & Setup
+Follow the steps below to set up and run the project:
 
-Clone the repository:
+### Clone the repository
+```
 git clone https://github.com/YoginKumar21/17_ChakraView.git
+cd 17_ChakraView
+```
 
-Install dependencies:
-
+### Install dependencies
+```
 npm install
+```
 
-Run the development server:
+### Run the development server
+```
 npm run dev
-
-Build for production:
-npm run build
+```
 
 ## 📂 Project Structure
 <pre>
