@@ -159,7 +159,7 @@ export default function CarCustomizer({ carSrc, onClose }) {
                                         }
                                         return acc;
                                     }, [])
-                                    .map((group, index) => ( index < 1 &&
+                                    .map((group, index) => (index < 1 &&
                                         <p key={index} className="text-black text-sm font-medium text-center">
                                             {group.toUpperCase()}
                                         </p>
@@ -200,9 +200,12 @@ export default function CarCustomizer({ carSrc, onClose }) {
                         />
                         <div className="controls">
                             {interiorParts.length > 0 ? (
-                                <ul className="parts-list interior">
+                                <ul className="parts-list interior ">
                                     {interiorParts.map((part) => (
-                                        <li key={part.name}>
+                                        <li key={part.name} className="w-30 h-20 bg-gray-200 flex flex-col items-center justify-center rounded-lg p-2 m-2 shadow hover:shadow-lg transition-shadow">
+                                            <p className="text-black text-sm font-medium text-center">
+                                                {part.name.toUpperCase() === "P1PHONG4SG1" ? "CABIN" : part.name.toUpperCase()}
+                                            </p>
                                             <input
                                                 type="color"
                                                 value={part.color}
