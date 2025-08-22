@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Model from "./components/Model";
+import Team from "./components/Team";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Home />} /> {/* ✅ Default route */}
           <Route path="/" element={<Home />} />
           <Route path="/models" element={<Model />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </div>
     </Router>

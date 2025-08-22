@@ -133,7 +133,32 @@
   display: flex;
 }
 
-@media screen and (width <= 600px) {
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.6));
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer h2 {
+  background: linear-gradient(to left, #f90000, #334eff);
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 3px 0 #000);
+}
+
+@media screen and (width <=600px) {
   .parts-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));

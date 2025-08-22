@@ -1,0 +1,242 @@
+.team {
+  width: 100%;
+  height: 83vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  font-family: "Audiowide", sans-serif;
+  padding-top: 60px;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+}
+
+.team .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 25%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+
+.team .slider:hover {
+  animation-play-state: paused;
+}
+
+.team .slider::after,
+.team .slider::before {
+  content: "Team 17";
+  width: 300%;
+  height: 150%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: transparent;
+  background-image: linear-gradient(120deg, #ff0000, #334eff);
+  background-clip: text;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+
+.team .slider::before {
+  top: -10%;
+  left: -80%;
+  transform: rotateY(180deg);
+}
+
+.team .slider .item {
+  height: 350px;
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.item::after,
+.item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 1rem;
+  background-image: conic-gradient(from var(--angle),
+      #334eff,
+      #ff0000,
+      #334eff);
+  border-radius: 1rem;
+  animation: 3s spin linear infinite;
+}
+
+.item::before {
+  filter: blur(1.5rem);
+}
+
+.team .slider .item .content {
+  width: 200px;
+  height: 350px;
+  background: #000;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & h3 {
+    font-size: 1.4rem;
+  }
+}
+
+.team .slider .item .content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  padding: 0;
+  position: relative;
+  scale: 0.9;
+}
+
+.team .slider .item .content .info {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: light-dark(#ffffffa5, #000000a5);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team .slider .item .content .info .socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.team .slider .item .content .info .socials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.3rem;
+  filter: drop-shadow(0 0 10px #fff);
+  opacity: 0.8;
+  transition: scale 0.3s ease-in-out;
+}
+
+.team .slider .item .content .info .socials img:hover {
+  scale: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  .team {
+    background: #ffffffa5;
+  }
+
+  .item::after,
+  .item::before {
+    background-image: conic-gradient(from var(--angle), #3cf, #c3f, #3cf);
+  }
+
+  .team .slider::after,
+  .team .slider::before {
+    background-image: linear-gradient(270deg, #3cf, #c3f);
+  }
+
+  .team .slider .item .content {
+    background: #ffef;
+    color: #c3f;
+  }
+
+  .team .slider .item .content .info .socials img {
+    filter: drop-shadow(0 0 10px #3cf);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .team {
+    height: 83vh;
+  }
+
+  .team .slider:hover {
+    animation-play-state: paused;
+  }
+
+  .team .slider::after,
+  .team .slider::before {
+    width: 200%;
+    font-size: 6rem;
+  }
+
+  .team .slider .item .content .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 315px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    transform: translateY(350px);
+    opacity: 0;
+    transition: all 0.5s linear;
+  }
+
+  .team .slider .item .content:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .team .slider .item .content .info .socials img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(2500px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(2500px) rotateY(-360deg);
+  }
+}
