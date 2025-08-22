@@ -34,7 +34,7 @@ Build for production:
 npm run build
 
 ## 📂 Project Structure
-
+<pre>
 17_ChakraView/
 │── public/            
 │── src/
@@ -51,6 +51,7 @@ npm run build
 │── tailwind.config.js
 │── vite.config.js
 └── README.md
+</pre>
 
 ## 🎥 Demo
 
@@ -58,8 +59,9 @@ npm run build
 
 
 ## 👥 Team Members
-
-Yogin Kumar
+<pre>
+Yogin Kumar 
 Samarth
 Sujan Kumar K
 Vinyas
+</pre>
