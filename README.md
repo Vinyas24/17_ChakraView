@@ -60,7 +60,7 @@ npm run dev
 ## 🎥 Demo
 
 🔗 Link to Demo Video
-
+https://drive.google.com/file/d/14Xvm2XzQHAhrdtcy7N8uEXmZIiBl2rC3/view?usp=drive_link
 
 ## 👥 Team Members
 <pre>
